@@ -78,7 +78,7 @@ def plot_wordcloud(df, colormap="Greens"):
 
     cmap = mpl.cm.get_cmap(colormap)(np.linspace(0, 1, 20))
     cmap = mpl.colors.ListedColormap(cmap[10:15])
-    mask = np.array(Image.open("like_mask.png")) 
+    mask = np.array(Image.open("static/like_mask.png")) 
     mask = np.where(mask>0, 255, 0)
     words = " ".join(text for text in df['text'] if isinstance(text, str))
     wc = WordCloud(
