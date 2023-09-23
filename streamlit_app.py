@@ -19,10 +19,10 @@ st.markdown(adjust_top_pad, unsafe_allow_html=True)
 
 def search_callback():
     # Initialize dataset
-    st.session_state.df = pd.read_excel('amazon_reviews.xlsx', index_col=0).sample(4000)
-    with open('logistic_regression_model.pkl', 'rb') as f:
+    st.session_state.df = pd.read_excel('static/amazon_reviews.xlsx', index_col=0).sample(4000)
+    with open('static/logistic_regression_model.pkl', 'rb') as f:
         st.session_state.lr_loaded = pickle.load(f)
-    with open('tfidf_vectorizer.pkl', 'rb') as f:
+    with open('static/tfidf_vectorizer.pkl', 'rb') as f:
         st.session_state.cvec_loaded = pickle.load(f)
 
 with st.sidebar:
